@@ -1,10 +1,13 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #333;
-    background-color:  aquamarine;
-  }
-  
+  box-sizing: border-box;
+}
+body {
+  background-color: aquamarine;
+}
+
+#flag-container img {
+  display: block;
+  width: 20%;
+  height: 40%;
+  margin-bottom: 50px;
+}
