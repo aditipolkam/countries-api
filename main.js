@@ -1,6 +1,13 @@
 let countries;
 const countriesList = document.getElementById('countries');
 
+//event listener
+countriesList.addEventListener("change", function(event){
+    displayCountryInfo(event.target.value);
+})
+
+
+
 fetch("https://restcountries.eu/rest/v2/all")
 .then(res => res.json())
 .then(data => initialize(data))
@@ -22,12 +29,13 @@ function initialize(countriesData){
     //document.querySelector('#countries').innerHTML = options;
     countriesList.innerHTML = options;
 
-    displayCountryInfo("AF");
+    //displayCountryInfo("AF");
+    displayCountryInfo(countriesList[countriesList.selectedIndex].value);
 }
 
 function displayCountryInfo(countryByAlpha2Code){
     const countryData = countries.find(country => country.alpha2Code === countryByAlpha2Code)
-    console.log(countryData); 
+    //console.log(countryData); 
     document.querySelector("#flag-container img").src = countryData.flag;
     document.querySelector("#flag-container img").alt = `Flag of ${countryData.name}`;
     document.getElementById("capital").innerHTML = countryData.capital;
