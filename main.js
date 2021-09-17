@@ -36,8 +36,10 @@ function initialize(countriesData){
 function displayCountryInfo(countryByAlpha2Code){
     const countryData = countries.find(country => country.alpha2Code === countryByAlpha2Code)
     //console.log(countryData); 
-    document.querySelector("#flag-container img").src = countryData.flag;
-    document.querySelector("#flag-container img").alt = `Flag of ${countryData.name}`;
+    //document.querySelector("#flag-container img").src = countryData.flag;
+    document.getElementById("flag").src = countryData.flag;
+    //document.querySelector("#flag-container img").alt = `Flag of ${countryData.name}`;
+    document.getElementById("flag").alt = `Flag of ${countryData.name}`;
     document.getElementById("capital").innerHTML = countryData.capital;
     document.getElementById("dialing-code").innerHTML = countryData.callingCodes[0];
     document.getElementById("population").innerHTML = countryData.population.toLocaleString("en-US");
