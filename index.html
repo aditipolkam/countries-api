@@ -8,19 +8,26 @@
     <title>Countries API</title>
 </head>
 <body>
-    <h1>REST Countries API</h1>
-    <div id="main-container">
-        <div id="flag-container">
-            <img src="" alt="" id="flag">
-        </div>
-        <div id="info-container">
-            <select id="countries"></select>
-            <p>Capital: <span id="capital"></span></p>
-            <p>Dialing Code: <span id="dialing-code"></span></p>
-            <p>Population: <span id="population"></span></p>
-            <p>Currencies: <span id="currencies"></span></p>
-            <p>Region: <span id="region"></span></p>
-            <p>Subregion: <span id="subregion"></span></p>
+    <div class="background">
+        <br>
+        <font size="20px"><center>REST Countries API</center></font>
+        <br><br><br>
+        <center><select id="countries" class="select"></select></center>
+        <br><br>
+        <div id="main-container">
+            <div id="flag-container">
+                <img src="" alt="" id="flag" align="right">
+            </div>
+            <div id="info-container" class="info-container">
+                <h2>
+                <p>Capital: <span id="capital"></span></p>
+                <p>Dialing Code: <span id="dialing-code"></span></p>
+                <p>Population: <span id="population"></span></p>
+                <p>Currencies: <span id="currencies"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Subregion: <span id="subregion"></span></p>
+	            </h2>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
